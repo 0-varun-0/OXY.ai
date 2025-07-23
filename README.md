@@ -2,11 +2,11 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![GitHub contributors](https://img.shields.io/github/contributors/your-username/OXY.ai.svg)](https://GitHub.com/your-username/OXY.ai/graphs/contributors/)
+[![GitHub contributors](https://img.shields.io/github/contributors/0-varun-0/OXY.ai.svg)](https://GitHub.com/your-username/OXY.ai/graphs/contributors/)
 
 Oxy.AI is a platform that lets anyone create a custom visual AI expert for any task, without needing deep learning expertise or massive datasets. It's built on a simple, powerful idea: **your AI should learn like a smart apprentice—by asking you questions when it gets stuck.**
 
-![A GIF showing the Oxy.AI user interface in action: uploading images, answering a question from the AI, and seeing the model's accuracy improve.](https://placehold.co/800x400/7c3aed/ffffff?text=Oxy.AI+In+Action+(Animated+GIF))
+![A GIF showing the Oxy.AI user interface in action: uploading images, answering a question from the AI, and seeing the model's accuracy improve.](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3hwMDE1eGFsZTN1YWZtdnN6ZXd2NmQweXEzbmQ0aXM3d2g2c3ZkeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5k5vZwRFZR5aZeniqb/giphy.gif)
 
 ---
 
