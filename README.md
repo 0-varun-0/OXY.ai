@@ -6,7 +6,7 @@
 
 Oxy.AI is a platform that lets anyone create a custom visual AI expert for any task, without needing deep learning expertise or massive datasets. It's built on a simple, powerful idea: **your AI should learn like a smart apprentice—by asking you questions when it gets stuck.**
 
-![A GIF showing the Oxy.AI user interface in action: uploading images, answering a question from the AI, and seeing the model's accuracy improve.](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3hwMDE1eGFsZTN1YWZtdnN6ZXd2NmQweXEzbmQ0aXM3d2g2c3ZkeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5k5vZwRFZR5aZeniqb/giphy.gif)
+![A GIF showing the Oxy.AI user interface in action: uploading images, answering a question from the AI, and seeing the model's accuracy improve.](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWFyMnZhZXF1MmcyOWJ6bThkdnVuanBiZzIyY2V0ZWZ6ZWtxZmNweCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n6mEMqAuYOQ8l8qcEE/giphy.gif)
 
 ---
 
