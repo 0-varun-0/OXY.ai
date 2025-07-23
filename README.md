@@ -51,5 +51,5 @@ The application is built as a modern, two-part system:
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/OXY.ai.git](https://github.com/YOUR_USERNAME/OXY.ai.git)
+git clone [https://github.com/0-varun-0/OXY.ai.git](https://github.com/0-varun-0/OXY.ai.git)
 cd OXY.ai
