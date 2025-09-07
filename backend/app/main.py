@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.schemas.msg import Msg
 from app.api.v1.endpoints import upload
@@ -32,6 +33,14 @@ app.include_router(auth.router, prefix=settings.API_V1_STR, tags=["Authenticatio
 app.include_router(history.router, prefix=settings.API_V1_STR, tags=["History"])
 
 @app.get("/", response_model=Msg)
+def read_root():
+    """
+    Root endpoint that returns a welcome message.
+    
+    The response is validated against the Msg schema.
+    """
+    return {"message": f"Welcome to the {settings.PROJECT_NAME}!"}
+t("/", response_model=Msg)
 def read_root():
     """
     Root endpoint that returns a welcome message.
