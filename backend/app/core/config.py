@@ -18,6 +18,18 @@ class Settings(BaseSettings):
     UPLOAD_DIR: str = "uploads"
     MAX_FILE_SIZE_MB: int = 5
     ALLOWED_MIME_TYPES: list[str] = ["image/jpeg", "image/png"]
+
+    # AI Model
+    DERMATOLOGY_LABELS: list[str] = [
+        "a normal mole",
+        "a melanoma",
+        "a basal cell carcinoma",
+        "an actinic keratosis",
+        "a benign keratosis-like lesion",
+        "a dermatofibroma",
+        "a vascular lesion",
+        "a squamous cell carcinoma",
+    ]
     
     class Config:
         # If you have a .env file, it will be read automatically

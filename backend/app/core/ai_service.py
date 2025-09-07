@@ -30,5 +30,36 @@ class AIModel:
             logger.error(f"Failed to load AI model: {e}")
             raise
 
+    def classify_image(self, image, labels: list[str]) -> dict[str, float]:
+        """
+        Performs zero-shot classification of an image against a list of text labels.
+
+        Args:
+            image: A PIL Image object.
+            labels: A list of string descriptions.
+
+        Returns:
+            A dictionary mapping each label to its probability score.
+        """
+        if self.model is None or self.processor is None:
+            raise RuntimeError("AI model is not loaded.")
+
+        try:
+            inputs = self.processor(
+                text=labels, images=image, return_tensors="pt", padding=True
+            ).to(self.device)
+
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+            
+            logits_per_image = outputs.logits_per_image
+            probs = logits_per_image.softmax(dim=1).cpu().numpy().flatten()
+
+            return {label: float(prob) for label, prob in zip(labels, probs)}
+        except Exception as e:
+            logger.error(f"Error during image classification: {e}")
+            # In a real app, you might want more specific error handling
+            raise
+
 # Instantiate the model on module load
 model_service = AIModel()

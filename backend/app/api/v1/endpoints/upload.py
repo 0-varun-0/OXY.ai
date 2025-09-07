@@ -43,3 +43,39 @@ async def upload_image(file: UploadFile = File(...)):
         )
 
     return {"message": f"File '{unique_filename}' uploaded successfully."}
+
+
+from PIL import Image
+from app.core.ai_service import model_service
+
+@router.get("/classify/{image_filename}")
+async def classify_uploaded_image(image_filename: str):
+    """
+    (Temporary Test Endpoint)
+    Classifies a previously uploaded image using the AI model.
+    """
+    file_path = os.path.join(settings.UPLOAD_DIR, image_filename)
+
+    if not os.path.exists(file_path):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Image not found."
+        )
+
+    try:
+        image = Image.open(file_path)
+        labels = settings.DERMATOLOGY_LABELS
+        
+        # Perform classification
+        predictions = model_service.classify_image(image, labels)
+
+        return predictions
+
+    except HTTPException as e:
+        # Re-raise HTTP exceptions
+        raise e
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error processing image: {e}"
+        )
