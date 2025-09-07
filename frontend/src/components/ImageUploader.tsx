@@ -55,10 +55,31 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onUploadSuccess }) => {
       }
       
       // Extract filename from the success message
+      import api from '../services/api';
+
+// ... (imports and interface)
+
+const ImageUploader: React.FC<ImageUploaderProps> = ({ onUploadSuccess }) => {
+  // ... (state declarations)
+
+  const handleUpload = async () => {
+    if (!selectedFile) return;
+
+    setUploading(true);
+    setError(null);
+
+    try {
+      const data = await api.uploadImage(selectedFile);
       const filenameMatch = data.message.match(/'([^']+)'/);
       if (filenameMatch) {
         onUploadSuccess(filenameMatch[1]);
       }
+    } catch (err: any) {
+      setError(err.message || 'An unknown error occurred.');
+    } finally {
+      setUploading(false);
+    }
+  };
 
     } catch (err: any) {
       setError(err.message || 'An unknown error occurred.');

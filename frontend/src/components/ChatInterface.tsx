@@ -49,18 +49,25 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ imageFilename }) => {
       if (!response.ok) throw new Error(data.detail || 'Failed to get response');
 
       // After a successful VQA call, fetch the whole conversation history
-      const historyResponse = await fetch(`http://localhost:8000/api/v1/history/conversations/${data.conversation_id}` , {
-        headers: { 'Authorization': `Bearer ${token}` },
-      });
-      const historyData = await historyResponse.json();
-      if (!historyResponse.ok) throw new Error(historyData.detail || 'Failed to fetch history');
+      import api from '../services/api';
+
+// ... (imports and interfaces)
+
+const ChatInterface: React.FC<ChatInterfaceProps> = ({ imageFilename }) => {
+  // ... (state declarations)
+
+  const handleSendMessage = async () => {
+    // ... (initial checks)
+
+    try {
+      const vqaData = await api.postVqa(imageFilename, currentInput, conversationId);
+      const historyData = await api.getConversationHistory(vqaData.conversation_id);
 
       setMessages(historyData.messages);
       setConversationId(historyData.id);
 
     } catch (err: any) {
       setError(err.message);
-      // Remove the optimistic user message on error
       setMessages(prev => prev.filter(msg => msg.id !== userMessage.id));
     } finally {
       setIsLoading(false);

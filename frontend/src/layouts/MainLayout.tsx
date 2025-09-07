@@ -1,19 +1,28 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, CssBaseline, Box } from '@mui/material';
 
+import { useAuth } from '../context/AuthContext';
+
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  const { isAuthenticated, logout } = useAuth();
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed">
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             OXY.ai Dermatology VQA
           </Typography>
+          {isAuthenticated && (
+            <Button color="inherit" onClick={logout}>
+              Logout
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
       <Box

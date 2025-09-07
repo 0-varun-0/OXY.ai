@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Button, TextField, Container, Typography, Box, Alert } from '@mui/material';
 
+import api from '../services/api';
+
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -14,21 +16,7 @@ const LoginPage: React.FC = () => {
     event.preventDefault();
     setError(null);
     try {
-      const formData = new URLSearchParams();
-      formData.append('username', email);
-      formData.append('password', password);
-
-      const response = await fetch('http://localhost:8000/api/v1/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formData.toString(),
-      });
-
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.detail || 'Login failed');
-      }
-
+      const data = await api.login(email, password);
       login(data.access_token);
       navigate('/');
     } catch (err: any) {
@@ -75,14 +63,8 @@ const LoginPage: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           {error && <Alert severity="error" sx={{ width: '100%', mt: 2 }}>{error}</Alert>}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
-            Sign In
-          </Button>
+          <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>Sign In</Button>
+          <Link component={RouterLink} to="/register" variant="body2">{"Don't have an account? Sign Up"}</Link>
         </Box>
       </Box>
     </Container>
