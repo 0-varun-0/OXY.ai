@@ -42,7 +42,9 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onUploadSuccess }) => {
     try {
       const response = await fetch('http://localhost:8000/api/v1/upload', {
         method: 'POST',
-        // We don't set Content-Type; the browser does it for multipart/form-data
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
         body: formData,
       });
 
@@ -94,6 +96,12 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onUploadSuccess }) => {
       )}
 
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
+    </Box>
+  );
+};
+
+export default ImageUploader;
+rror" sx={{ mt: 2 }}>{error}</Alert>}
     </Box>
   );
 };

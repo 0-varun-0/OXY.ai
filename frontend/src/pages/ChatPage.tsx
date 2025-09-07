@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Typography, Box, Paper } from '@mui/material';
 import ImageUploader from '../components/ImageUploader';
 
+import ChatInterface from '../components/ChatInterface';
+
 const ChatPage: React.FC = () => {
   const [uploadedFilename, setUploadedFilename] = useState<string | null>(null);
 
@@ -22,13 +24,7 @@ const ChatPage: React.FC = () => {
           <ImageUploader onUploadSuccess={handleUploadSuccess} />
         </Box>
       ) : (
-        <Box>
-          <Typography variant="h5" gutterBottom>
-            Step 2: Ask a Question
-          </Typography>
-          <Typography>Uploaded file: {uploadedFilename}</Typography>
-          {/* The Chat Interface component will go here in a future stage */}
-        </Box>
+        <ChatInterface imageFilename={uploadedFilename} />
       )}
     </Paper>
   );
