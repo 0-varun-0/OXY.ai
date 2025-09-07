@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./oxy_ai.db:/app/oxy_ai.db
+    environment:
+      # This ensures the app inside the container finds the database at the correct path
+      - SQLALCHEMY_DATABASE_URI=sqlite+aiosqlite:////app/oxy_ai.db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  uploads_data:
+  db_data:
