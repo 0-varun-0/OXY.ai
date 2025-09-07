@@ -2,6 +2,12 @@ from fastapi import FastAPI
 from app.core.config import settings
 from app.schemas.msg import Msg
 from app.api.v1.endpoints import upload
+from app.core.ai_service import model_service # Import the service
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Create an instance of the FastAPI class using settings from config
 app = FastAPI(
@@ -9,6 +15,16 @@ app = FastAPI(
     version=settings.PROJECT_VERSION,
     description="API for the Dermatology Visual Question Answering (VQA) Chatbot.",
 )
+
+@app.on_event("startup")
+async def startup_event():
+    """Event handler for application startup."""
+    logger.info("Application startup...")
+    # This will trigger the model loading
+    if model_service.model is None or model_service.processor is None:
+        logger.error("AI model failed to load!")
+    else:
+        logger.info("AI model loaded and ready.")
 
 app.include_router(upload.router, prefix=settings.API_V1_STR, tags=["Upload"])
 
