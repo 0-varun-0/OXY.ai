@@ -12,6 +12,8 @@ pip-wheel-metadata/
 *.egg-info/
 dist/
 build/
+# Local data
+uploads/
 *.db
 *.sqlite3
 

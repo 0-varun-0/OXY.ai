@@ -13,6 +13,11 @@ class Settings(BaseSettings):
 
     # Database settings
     SQLALCHEMY_DATABASE_URI: str = "sqlite+aiosqlite:///./oxy_ai.db"
+
+    # File Uploads
+    UPLOAD_DIR: str = "uploads"
+    MAX_FILE_SIZE_MB: int = 5
+    ALLOWED_MIME_TYPES: list[str] = ["image/jpeg", "image/png"]
     
     class Config:
         # If you have a .env file, it will be read automatically
