@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
 
     # Database settings
-    # SQLALCHEMY_DATABASE_URI: str = "sqlite:///./oxy_ai.db" # Example for SQLite
+    SQLALCHEMY_DATABASE_URI: str = "sqlite+aiosqlite:///./oxy_ai.db"
     
     class Config:
         # If you have a .env file, it will be read automatically
