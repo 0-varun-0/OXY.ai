@@ -1,15 +1,19 @@
 from fastapi import FastAPI
+from app.core.config import settings
+from app.schemas.msg import Msg
 
-# Create an instance of the FastAPI class
+# Create an instance of the FastAPI class using settings from config
 app = FastAPI(
-    title="OXY.ai API",
+    title=settings.PROJECT_NAME,
+    version=settings.PROJECT_VERSION,
     description="API for the Dermatology Visual Question Answering (VQA) Chatbot.",
-    version="0.1.0",
 )
 
-@app.get("/")
+@app.get("/", response_model=Msg)
 def read_root():
     """
     Root endpoint that returns a welcome message.
+    
+    The response is validated against the Msg schema.
     """
-    return {"message": "Welcome to the OXY.ai FastAPI server!"}
+    return {"message": f"Welcome to the {settings.PROJECT_NAME}!"}
