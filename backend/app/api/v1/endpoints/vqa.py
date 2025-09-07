@@ -6,10 +6,16 @@ from app.core.config import settings
 from app.core.ai_service import model_service
 from app.schemas.vqa import VqaRequest, VqaResponse
 
+from app import models
+from app.api.v1.endpoints.auth import get_current_user
+
 router = APIRouter()
 
 @router.post("/vqa", response_model=VqaResponse)
-async def visual_question_answering(request: VqaRequest = Body(...)):
+async def visual_question_answering(
+    current_user: models.User = Depends(get_current_user),
+    request: VqaRequest = Body(...)
+):
     """
     Handles a visual question answering request.
     - Validates the image file exists.

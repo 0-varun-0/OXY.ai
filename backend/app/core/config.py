@@ -37,6 +37,11 @@ class Settings(BaseSettings):
         "This tool is for educational purposes only. Consult a qualified dermatologist "
         "for any health concerns."
     )
+
+    # Security
+    SECRET_KEY: str = "9b1b54b381f16a4d0e08c661daf362ec690fc879ac42cce28c1f199cd46a8066"
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     
     class Config:
         # If you have a .env file, it will be read automatically
