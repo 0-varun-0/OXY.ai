@@ -29,6 +29,7 @@ async def startup_event():
 app.include_router(upload.router, prefix=settings.API_V1_STR, tags=["Upload"])
 app.include_router(vqa.router, prefix=settings.API_V1_STR, tags=["VQA"])
 app.include_router(auth.router, prefix=settings.API_V1_STR, tags=["Authentication"])
+app.include_router(history.router, prefix=settings.API_V1_STR, tags=["History"])
 
 @app.get("/", response_model=Msg)
 def read_root():
