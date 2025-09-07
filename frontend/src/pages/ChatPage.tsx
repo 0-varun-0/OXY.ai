@@ -26,6 +26,9 @@ const ChatPage: React.FC = () => {
       ) : (
         <ChatInterface imageFilename={uploadedFilename} />
       )}
+      <Alert severity="warning" sx={{ mt: 3 }}>
+        Disclaimer: This is an AI-generated analysis and not a medical diagnosis. This tool is for educational purposes only. Consult a qualified dermatologist for any health concerns.
+      </Alert>
     </Paper>
   );
 };

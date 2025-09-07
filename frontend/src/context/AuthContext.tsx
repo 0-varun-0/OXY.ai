@@ -9,6 +9,16 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
+
+export { AuthContext, useAuth };
+
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
 

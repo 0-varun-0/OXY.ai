@@ -19,8 +19,9 @@ const LoginPage: React.FC = () => {
       const data = await api.login(email, password);
       login(data.access_token);
       navigate('/');
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err) {
+      const error = err as Error;
+      setError(error.message);
     }
   };
 

@@ -18,8 +18,9 @@ const RegisterPage: React.FC = () => {
       await api.register(email, password);
       setSuccess('Registration successful! Redirecting to login...');
       setTimeout(() => navigate('/login'), 2000);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err) {
+      const error = err as Error;
+      setError(error.message);
     }
   };
 
