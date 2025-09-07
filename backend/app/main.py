@@ -27,6 +27,7 @@ async def startup_event():
         logger.info("AI model loaded and ready.")
 
 app.include_router(upload.router, prefix=settings.API_V1_STR, tags=["Upload"])
+app.include_router(vqa.router, prefix=settings.API_V1_STR, tags=["VQA"])
 
 @app.get("/", response_model=Msg)
 def read_root():

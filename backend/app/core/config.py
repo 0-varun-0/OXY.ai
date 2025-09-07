@@ -30,6 +30,13 @@ class Settings(BaseSettings):
         "a vascular lesion",
         "a squamous cell carcinoma",
     ]
+
+    # Disclaimer
+    MEDICAL_DISCLAIMER: str = (
+        "IMPORTANT: This is an AI-generated analysis and not a medical diagnosis. "
+        "This tool is for educational purposes only. Consult a qualified dermatologist "
+        "for any health concerns."
+    )
     
     class Config:
         # If you have a .env file, it will be read automatically
