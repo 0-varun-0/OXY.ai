@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-green.svg) ![React](https://img.shields.io/badge/React-18%2B-blue.svg) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg) ![Docker](https://img.shields.io/badge/Docker-20.10%2B-blue.svg)
 
-OXY.ai is a proof-of-concept web application designed for the CSE7101 Capstone Project. It provides users with an educational, AI-driven analysis of skin lesion images. Users can upload an image, ask questions in natural language, and receive a classification based on the OpenAI CLIP model, all within a secure, session-based chat interface.
+OXY.ai is a proof-of-concept web application designed for AI-assisted analysis of skin lesion images. Users can upload an image, ask questions in natural language, and receive a classification based on the OpenAI CLIP model, all within a secure, session-based chat interface.
 
 > **⚠️ MEDICAL DISCLAIMER**
 > This is an AI-generated analysis and **not a medical diagnosis**. This tool is for educational and informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. **Always consult a qualified dermatologist** for any health concerns.
