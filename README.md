@@ -1,4 +1,4 @@
-# OXY.ai: AI-Powered Dermatology Visual Question Answering
+# OXY.ai: AI-Powered MedicalVisual Question Answering
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-green.svg) ![React](https://img.shields.io/badge/React-18%2B-blue.svg) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg) ![Docker](https://img.shields.io/badge/Docker-20.10%2B-blue.svg)
 
