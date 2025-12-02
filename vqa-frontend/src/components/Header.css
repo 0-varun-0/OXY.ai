@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-panel);
+  color: var(--text-main);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  background-color: var(--primary);
+  color: var(--bg-panel);
+  padding: 0.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+.controls-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+
+.theme-switcher select {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  color: var(--text-main);
+  font-size: 0.875rem;
+}
+
+.status-section {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-muted);
+}
+
+.status-section[data-connected="true"] {
+  color: #10b981;
+}
+
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--bg-panel);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: var(--shadow);
+  color: var(--text-main);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.modal-body p {
+  line-height: 1.6;
+}
+
+.modal-body ol {
+  padding-left: 1.5rem;
+}

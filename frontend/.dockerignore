@@ -1,7 +1,0 @@
-node_modules
-dist
-.npm
-.vite
-npm-debug.log*
-.env*
-docs/

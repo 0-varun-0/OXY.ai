@@ -1,0 +1,271 @@
+Started at Sun Nov 30 04:36:37 PM IST 2025
+Project root: /home/varun/projects101/OXY.ai
+Using PIP_CACHE_DIR=/home/varun/projects101/OXY.ai/.pip_cache TMPDIR=/home/varun/projects101/OXY.ai/.tmp_pip
+.venv exists. Removing it for a clean install...
+Created .venv
+Activated venv: /home/varun/projects101/OXY.ai/.venv/bin/python Python 3.13.7
+Upgrading pip/setuptools/wheel...
+Collecting pip
+  Downloading pip-25.3-py3-none-any.whl.metadata (4.7 kB)
+Collecting setuptools
+  Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting wheel
+  Downloading wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Downloading pip-25.3-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 12.6 MB/s  0:00:00
+Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 17.2 MB/s  0:00:00
+Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+Installing collected packages: wheel, setuptools, pip
+
+Successfully installed pip-25.3 setuptools-80.9.0 wheel-0.45.1
+Using requirements file: backend/requirements.txt
+Attempting bulk install (no-cache-dir)...
+Collecting fastapi (from -r backend/requirements.txt (line 1))
+  Downloading fastapi-0.122.0-py3-none-any.whl.metadata (30 kB)
+Collecting python-multipart (from -r backend/requirements.txt (line 3))
+  Downloading python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+Collecting pillow (from -r backend/requirements.txt (line 4))
+  Downloading pillow-12.0.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting transformers>=4.30.0 (from -r backend/requirements.txt (line 5))
+  Downloading transformers-4.57.3-py3-none-any.whl.metadata (43 kB)
+Collecting huggingface_hub (from -r backend/requirements.txt (line 6))
+  Downloading huggingface_hub-1.1.6-py3-none-any.whl.metadata (13 kB)
+Collecting torch (from -r backend/requirements.txt (line 7))
+  Downloading torch-2.9.1-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting uvicorn[standard] (from -r backend/requirements.txt (line 2))
+  Downloading uvicorn-0.38.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting starlette<0.51.0,>=0.40.0 (from fastapi->-r backend/requirements.txt (line 1))
+  Downloading starlette-0.50.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi->-r backend/requirements.txt (line 1))
+  Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi->-r backend/requirements.txt (line 1))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi->-r backend/requirements.txt (line 1))
+  Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r backend/requirements.txt (line 1))
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.41.5 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r backend/requirements.txt (line 1))
+  Downloading pydantic_core-2.41.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi->-r backend/requirements.txt (line 1))
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting anyio<5,>=3.6.2 (from starlette<0.51.0,>=0.40.0->fastapi->-r backend/requirements.txt (line 1))
+  Downloading anyio-4.12.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.51.0,>=0.40.0->fastapi->-r backend/requirements.txt (line 1))
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting click>=7.0 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting h11>=0.8 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting httptools>=0.6.3 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading httptools-0.7.1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+Collecting python-dotenv>=0.13 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+Collecting pyyaml>=5.1 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting uvloop>=0.15.1 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading uvloop-0.22.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+Collecting watchfiles>=0.13 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading watchfiles-1.1.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting websockets>=10.4 (from uvicorn[standard]->-r backend/requirements.txt (line 2))
+  Downloading websockets-15.0.1-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting filelock (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+Collecting huggingface_hub (from -r backend/requirements.txt (line 6))
+  Downloading huggingface_hub-0.36.0-py3-none-any.whl.metadata (14 kB)
+Collecting numpy>=1.17 (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting packaging>=20.0 (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting regex!=2019.12.17 (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading regex-2025.11.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting requests (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading tokenizers-0.22.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting safetensors>=0.4.3 (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting tqdm>=4.27 (from transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting fsspec>=2023.5.0 (from huggingface_hub->-r backend/requirements.txt (line 6))
+  Downloading fsspec-2025.10.0-py3-none-any.whl.metadata (10 kB)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface_hub->-r backend/requirements.txt (line 6))
+  Downloading hf_xet-1.2.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting setuptools (from torch->-r backend/requirements.txt (line 7))
+  Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting sympy>=1.13.3 (from torch->-r backend/requirements.txt (line 7))
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch->-r backend/requirements.txt (line 7))
+  Downloading networkx-3.6-py3-none-any.whl.metadata (6.8 kB)
+Collecting jinja2 (from torch->-r backend/requirements.txt (line 7))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (7.0 kB)
+Collecting nvidia-nccl-cu12==2.27.5 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
+Collecting nvidia-nvshmem-cu12==3.3.20 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch->-r backend/requirements.txt (line 7))
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting triton==3.5.1 (from torch->-r backend/requirements.txt (line 7))
+  Downloading triton-3.5.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch->-r backend/requirements.txt (line 7))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch->-r backend/requirements.txt (line 7))
+  Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests->transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading charset_normalizer-3.4.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests->transformers>=4.30.0->-r backend/requirements.txt (line 5))
+  Downloading certifi-2025.11.12-py3-none-any.whl.metadata (2.5 kB)
+Downloading fastapi-0.122.0-py3-none-any.whl (110 kB)
+Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+Downloading pydantic_core-2.41.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 11.3 MB/s  0:00:00
+Downloading starlette-0.50.0-py3-none-any.whl (74 kB)
+Downloading anyio-4.12.0-py3-none-any.whl (113 kB)
+Downloading uvicorn-0.38.0-py3-none-any.whl (68 kB)
+Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+Downloading pillow-12.0.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 9.4 MB/s  0:00:00
+Downloading transformers-4.57.3-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 10.7 MB/s  0:00:01
+Downloading huggingface_hub-0.36.0-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.1/566.1 kB 20.8 MB/s  0:00:00
+Downloading hf_xet-1.2.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 14.6 MB/s  0:00:00
+Downloading tokenizers-0.22.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 13.3 MB/s  0:00:00
+Downloading torch-2.9.1-cp313-cp313-manylinux_2_28_x86_64.whl (899.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 899.7/899.7 MB 16.2 MB/s  0:01:06
+Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 12.9 MB/s  0:00:47
+Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 16.4 MB/s  0:00:00
+Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 11.2 MB/s  0:00:07
+Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 21.7 MB/s  0:00:00
+Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 9.8 MB/s  0:01:21
+Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 12.3 MB/s  0:00:15
+Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 12.8 MB/s  0:00:00
+Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 11.2 MB/s  0:00:05
+Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 11.2 MB/s  0:00:23
+Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 12.1 MB/s  0:00:23
+Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 14.5 MB/s  0:00:19
+Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.3/322.3 MB 13.3 MB/s  0:00:24
+Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 8.0 MB/s  0:00:04
+Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (124.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.7/124.7 MB 8.6 MB/s  0:00:14
+Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+Downloading triton-3.5.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (170.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.5/170.5 MB 11.5 MB/s  0:00:14
+Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading click-8.3.1-py3-none-any.whl (108 kB)
+Downloading fsspec-2025.10.0-py3-none-any.whl (200 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading httptools-0.7.1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (478 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading networkx-3.6-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 9.2 MB/s  0:00:00
+Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 8.9 MB/s  0:00:01
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 10.6 MB/s  0:00:00
+Downloading regex-2025.11.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (803 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 803.5/803.5 kB 5.6 MB/s  0:00:00
+Downloading safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (507 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 8.2 MB/s  0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 15.7 MB/s  0:00:00
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Downloading uvloop-0.22.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 7.9 MB/s  0:00:00
+Downloading watchfiles-1.1.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+Downloading websockets-15.0.1-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+Downloading certifi-2025.11.12-py3-none-any.whl (159 kB)
+Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.9 MB/s  0:00:00
+Installing collected packages: nvidia-cusparselt-cu12, mpmath, websockets, uvloop, urllib3, typing-extensions, triton, tqdm, sympy, setuptools, safetensors, regex, pyyaml, python-multipart, python-dotenv, pillow, packaging, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, idna, httptools, hf-xet, h11, fsspec, filelock, click, charset_normalizer, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, requests, pydantic-core, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, jinja2, anyio, watchfiles, starlette, pydantic, nvidia-cusolver-cu12, huggingface_hub, torch, tokenizers, fastapi, transformers
+
+Successfully installed MarkupSafe-3.0.3 annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.12.0 certifi-2025.11.12 charset_normalizer-3.4.4 click-8.3.1 fastapi-0.122.0 filelock-3.20.0 fsspec-2025.10.0 h11-0.16.0 hf-xet-1.2.0 httptools-0.7.1 huggingface_hub-0.36.0 idna-3.11 jinja2-3.1.6 mpmath-1.3.0 networkx-3.6 numpy-2.3.5 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.3.20 nvidia-nvtx-cu12-12.8.90 packaging-25.0 pillow-12.0.0 pydantic-2.12.5 pydantic-core-2.41.5 python-dotenv-1.2.1 python-multipart-0.0.20 pyyaml-6.0.3 regex-2025.11.3 requests-2.32.5 safetensors-0.7.0 setuptools-80.9.0 starlette-0.50.0 sympy-1.14.0 tokenizers-0.22.1 torch-2.9.1 tqdm-4.67.1 transformers-4.57.3 triton-3.5.1 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.5.0 uvicorn-0.38.0 uvloop-0.22.1 watchfiles-1.1.1 websockets-15.0.1
+WARNING: Target directory /home/varun/python_global/lib/urllib3 already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/urllib3-2.5.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/typing_extensions.py already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/typing_extensions-4.15.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/__pycache__ already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/tqdm already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/tqdm-4.67.1.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/distutils-precedence.pth already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/_distutils_hack already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/pkg_resources already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/setuptools already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/setuptools-80.9.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/_yaml already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/yaml already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/pyyaml-6.0.3.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/packaging already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/packaging-25.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/idna already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/idna-3.11.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/hf_xet already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/hf_xet-1.2.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/fsspec already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/fsspec-2025.10.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/filelock already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/filelock-3.20.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/charset_normalizer already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/charset_normalizer-3.4.4.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/certifi already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/certifi-2025.11.12.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/requests already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/requests-2.32.5.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/huggingface_hub already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/huggingface_hub-0.36.0.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /home/varun/python_global/lib/bin already exists. Specify --upgrade to force replacement.
+Bulk install succeeded.
+Done.
